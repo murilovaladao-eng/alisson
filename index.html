@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        header, nav, main, footer {
+            width: 100%;
+            max-width: 1000px;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #11270B;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #669D31;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            background-color: #71B340;
+            padding: 40px 20px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            color: white;
+        }
+
+      
+        main ol {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #598B2C;
+            padding: 20px;
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+        }
+
+        .bloco-footer {
+            padding: 15px;
+            margin: 10px;
+            color: white;
+            flex: 1;
+            min-width: 250px; 
+            max-width: 300px;
+            border-radius: 8px; 
+        }
+
+        #bloco1, #bloco2, #bloco3 {
+            background-color: #3C5A14;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Feira das Nações</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        
+    </main>
+
+    <footer>
+        <div class="bloco-footer" id="bloco1">
+            <p>1. Apresenta uma grande rede de fast foods deliciosos, tendo como comida principal o hambúrguer.</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco2">
+            <p>2. Apresenta uma massa deliciosa recheada, a pizza, a Itália tem a melhor pizza do mundo de acordo com avaliações de especialistas.</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco3">
+            <p>3. Apresenta uma bolinha de cacau recheada com açúcar e granulado preto, o brigadeiro, tem avaliações muito positivas de estrangeiros que vem para o Brasil.</p>
+        </div>
+    </footer>
+
+    <script>
+        const main = document.getElementById("conteudo");
+
+        const titulo = document.createElement("h2");
+        titulo.textContent = "Top 3 comidas dos países das Feiras das Nações";
+        main.appendChild(titulo);
+
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Ranking.";
+        main.appendChild(paragrafo);
+
+        const lista = document.createElement("ol");
+
+        const item1 = document.createElement("li");
+        item1.textContent = "Estados Unidos";
+        lista.appendChild(item1);
+
+        const item2 = document.createElement("li");
+        item2.textContent = "Itália";
+        lista.appendChild(item2);
+
+        const item3 = document.createElement("li");
+        item3.textContent = "Brasil";
+        lista.appendChild(item3);
+
+        main.appendChild(lista);
+    </script>
+
+</body>
+</html>
